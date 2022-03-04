@@ -1,4 +1,6 @@
 streamlit
 geopandas
 plotly
-plotly
+folium
+matplotlib
+mapclassify
