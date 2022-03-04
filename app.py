@@ -4,10 +4,12 @@ import geopandas
 import plotly.express as px
 
 import subprocess
-subprocess.run(["ls"])
 
-subprocess.run(["pwd"])
+et = subprocess.run(["ls"], capture_output=True)
+st.write(et)
 
+et = subprocess.run(["pwd"], capture_output=True)
+st.write(et)
 
 #subprocess.run(["cd data/geo && pwd"])
 
