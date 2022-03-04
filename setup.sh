@@ -17,3 +17,7 @@ enableCORS=false
 port = $PORT
 \
 " > ~/.streamlit/config.toml
+
+pwd
+
+cd data/geo && pwd
