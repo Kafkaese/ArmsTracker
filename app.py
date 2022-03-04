@@ -9,3 +9,5 @@ world = geopandas.read_file('data/geo/world.geojson')
 world.drop(columns = ['zoneName', 'countryKey'], inplace = True)
 
 world.explore()
+
+st.pyplot(fig)
