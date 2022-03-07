@@ -1,3 +1,5 @@
+import json
+
 def get_plot_export_data(export_data, geo_data, years):
     """
     Filters data based on @year and merges the two dataframes ready for the interactive map.
@@ -10,14 +12,14 @@ def get_plot_export_data(export_data, geo_data, years):
         
     Returns
     -------
-    data : DataFrame, ready for plotting in bokeh 
+    data : GeoJSON, ready for plotting in bokeh 
     """
     
     if not isinstance(years, list):
-        yeasr = [years]
+        years = [years]
     
     # Filter export data by year and calculate yearly total
-    export_total_data = export_data[export_data['year'].isnin(years)].groupby('source_country')[['value']].sum()
+    export_total_data = export_data[export_data['year'].isin(years)].groupby('source_country')[['value']].sum()
     
     # Rename export data column to match geo data colums
     export_total_data = export_total_data.reset_index().rename(columns={'source_country': 'countryKey'})
@@ -31,4 +33,8 @@ def get_plot_export_data(export_data, geo_data, years):
     # Round value to millions
     data['total_mil'] = data['value'].apply(lambda x: round(x/1000000, 2))
     
+    # Convert to GeoJSON
+    data = json.dumps(json.loads(data.to_json()))
+    
+
     return data
