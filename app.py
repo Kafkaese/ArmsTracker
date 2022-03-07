@@ -10,4 +10,4 @@ world.drop(columns = ['zoneName', 'countryKey'], inplace = True)
 
 world.explore()
 
-st.pyplot(fig)
+st.pyplot()
