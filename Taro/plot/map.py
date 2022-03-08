@@ -49,8 +49,8 @@ def plot_export_map(data, **kwargs):
     p.add_tools(hover)
     p.add_tools(zoom)
         
-    layout = column(p)
-    curdoc().add_root(layout)
+    #layout = column(p)
+    #curdoc().add_root(layout)
     
     return p
     

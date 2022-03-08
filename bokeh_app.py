@@ -2,7 +2,7 @@ import pandas as pd
 import geopandas
 from bokeh.io import show
 from bokeh.io.doc import curdoc
-
+from bokeh.layouts import column
 
 from taro.preproc.plotting import get_plot_export_data
 from taro.plot.map import plot_export_map
