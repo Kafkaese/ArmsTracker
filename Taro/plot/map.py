@@ -52,3 +52,5 @@ def plot_export_map(data, **kwargs):
     layout = column(p)
     curdoc().add_root(layout)
     
+    return p
+    

@@ -1,7 +1,2 @@
-streamlit
 geopandas
-plotly
-folium
-matplotlib
-mapclassify
 bokeh

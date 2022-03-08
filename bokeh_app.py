@@ -1,5 +1,7 @@
 import pandas as pd
 import geopandas
+from bokeh.io import show
+
 
 from taro.preproc.plotting import get_plot_export_data
 from taro.plot.map import plot_export_map
@@ -14,4 +16,5 @@ export_data.columns = ['year', 'embargo', 'source_country', 'source_country_name
 
 data = get_plot_export_data(export_data=export_data, geo_data=geo_data, years=2020)
 
-plot_export_map(data)
+p = plot_export_map(data)
+
