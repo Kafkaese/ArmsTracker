@@ -3,6 +3,7 @@ import geopandas
 from bokeh.io import show
 from bokeh.io.doc import curdoc
 from bokeh.layouts import column
+from bokeh.client import push_session
 
 from taro.preproc.plotting import get_plot_export_data
 from taro.plot.map import plot_export_map
@@ -20,5 +21,5 @@ data = get_plot_export_data(export_data=export_data, geo_data=geo_data, years=20
 p = plot_export_map(data)
 
 curdoc().add_root(column(p))
-
-show(p)
+session = push_session(curdoc())
+session.show()
