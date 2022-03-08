@@ -20,3 +20,5 @@ data = get_plot_export_data(export_data=export_data, geo_data=geo_data, years=20
 p = plot_export_map(data)
 
 curdoc().add_root(column(p))
+
+show(p)
