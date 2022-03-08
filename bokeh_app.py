@@ -4,6 +4,13 @@ from bokeh.io import show
 from bokeh.io.doc import curdoc
 from bokeh.layouts import column
 from bokeh.client import push_session
+from bokeh.plotting import figure
+from bokeh.models import GeoJSONDataSource
+from bokeh.palettes import brewer
+
+from bokeh.io import show
+from bokeh.io.doc import curdoc
+from bokeh.models import HoverTool, LinearColorMapper, WheelZoomTool
 
 from taro.preproc.plotting import get_plot_export_data
 from taro.plot.map import plot_export_map
