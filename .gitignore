@@ -7,3 +7,6 @@ raw_data/
 **/__pycache__/
 .env
 *.ipynb
+node_modules
+package.json
+package-lock.json
