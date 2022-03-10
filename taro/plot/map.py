@@ -46,27 +46,23 @@ def plot_export_map(data, **kwargs):
         <div>
             <div>
                 <img
-                    src="@imgs" height="42" alt="@imgs" width="42"
+                    src="@flag" height="60" alt="@flag" width="90"
                     style="float: left; margin: 0px 15px 15px 0px;"
-                    border="2"
+                    border="1"
                 ></img>
             </div>
             <div>
-                <span style="font-size: 17px; font-weight: bold;">@desc</span>
-                <span style="font-size: 15px; color: #966;">[$index]</span>
+                <span style="font-size: 17px; font-weight: bold;">@countryName</span>
             </div>
             <div>
-                <span>@fonts{safe}</span>
-            </div>
-            <div>
-                <span style="font-size: 15px;">Location</span>
-                <span style="font-size: 10px; color: #696;">($x, $y)</span>
+                <span style="font-size: 15px;">Total Exports (mil EUR)</span>
+                <span style="font-size: 10px; color: #696;">@value</span>
             </div>
         </div>
     """
     tooltips_old = [ ('Name', '@flag'), ('Total Exports 2020 (Million EUR)', '@total_mil')]
     
-    hover = HoverTool(tooltips = tooltips_old)
+    hover = HoverTool(tooltips = tooltips)
     zoom = WheelZoomTool()
     
     # Add the hover tool to the graph
