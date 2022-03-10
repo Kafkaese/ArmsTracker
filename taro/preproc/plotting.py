@@ -36,7 +36,7 @@ def get_plot_export_data(export_data, geo_data, years):
     #return export_total_data
     export_total_data.reset_index(inplace = True)
     
-    export_total_data['flag'] = export_total_data['source_country'].apply(flag.flag)
+    export_total_data['flag'] = export_total_data['source_country'].apply(flag)
     
     export_total_data.set_index('source_country')
     
