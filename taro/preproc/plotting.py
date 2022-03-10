@@ -43,13 +43,17 @@ def get_plot_export_data(export_data, geo_data, years):
     # Rename export data column to match geo data colums
     export_total_data = export_total_data.reset_index().rename(columns={'source_country': 'countryKey'})
     
-    
     # Clean @countryKey in export data
     export_total_data['countryKey'] = export_total_data['countryKey'].apply(lambda x: x.strip())
     
-    
     # Merge export with geo data
     data = geo_data.merge(export_total_data, how='left', on='countryKey')
+    
+    # Generate flag emojis
+    data['flag_emoji'] = data['countryKey'].apply(flag)
+    
+     # Generae flag imgs
+    data['flag'] = data['countryKey'].apply(lambda cc: f'https://raw.githubusercontent.com/Kafkaese/ArmsTracker/HoverTool/taro/data/flags/png/{cc.lower()}.png')
     
     # Round value to millions
     data['total_mil'] = data['value'].apply(lambda x: round(x/1000000, 2))
