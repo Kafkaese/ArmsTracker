@@ -23,6 +23,8 @@ def plot_sidebar(data):
     
     p.hbar(y = 'destination_country', right = 'value', source = data, height=0.7)
 
+    return p
+
 
 def plot_export_map(data, **kwargs):
     """
