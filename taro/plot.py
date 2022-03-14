@@ -20,7 +20,7 @@ def plot_sidebar(data):
    
     #p.add_glyph(data, glyph)
     
-    p.hbar(y = 'destination_country', right = 'value', source = data)
+    p.hbar(y = 'destination_country', right = 'value', source = data, height=0.7)
     
     return p
 
