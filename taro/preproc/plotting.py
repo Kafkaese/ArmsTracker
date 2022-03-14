@@ -65,3 +65,29 @@ def get_plot_export_data(export_data, geo_data, years):
     
 
     return data #, data_raw
+
+
+def get_sidebar_export_data(export_data, source_country,  years):
+    
+    # Drop empty column
+    export_data = export_data.drop(columns = [11]) 
+    
+    # Set column names
+    export_data.columns = ['year', 'embargo', 'source_country', 'source_country_name', 'destination_country', 'destination_country_name', 'region_code', 'region_name', 'rating', 'category', 'value']
+    
+    # Clean source country column
+    export_data['source_country'] = export_data['source_country'].apply(lambda x: x.strip())
+    
+    # Remove missing source countries and target countries
+    export_data = export_data[export_data['source_country'] == source_country]
+    export_data = export_data[export_data['destination_country'] != ' ']
+    
+    
+    # Filter for years
+    if not isinstance(years, list):
+        years = [years]
+    
+    # Filter export data by year and calculate yearly total
+    sidebar_data = export_data[export_data['year'].isin(years)].groupby('destination_country')[['value']].sum()
+    
+    return sidebar_data.reset_index()
