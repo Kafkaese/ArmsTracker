@@ -10,20 +10,18 @@ def plot_sidebar(data):
     Creates the interactive sidebar
     
     """
+    data = data.sort_values('value').head(10)
     
     data = ColumnDataSource(data)
     print(data.data)
     
-    p = figure(y_range = data.data['destination_country'], width = 300)
+    p = figure(y_range = data.data['destination_country'], width = 300, height = 300)
     
     #glyph = HBar(y = 'destination_country', right = 'value')
    
     #p.add_glyph(data, glyph)
     
     p.hbar(y = 'destination_country', right = 'value', source = data, height=0.7)
-    
-    return p
-
 
 
 def plot_export_map(data, **kwargs):
