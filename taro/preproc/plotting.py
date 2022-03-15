@@ -53,7 +53,7 @@ def get_plot_export_data(export_data, geo_data, years):
     data['flag_emoji'] = data['countryKey'].apply(flag)
     
      # Generae flag imgs
-    data['flag'] = data['countryKey'].apply(lambda cc: f'~/app/taro/data/flags/png/{cc.lower()}.png')
+    data['flag'] = data['countryKey'].apply(lambda cc: f'../data/flags/png/{cc.lower()}.png')
     
     # Round value to millions
     data['total_mil'] = data['value'].apply(lambda x: round(x/1000000, 2))
