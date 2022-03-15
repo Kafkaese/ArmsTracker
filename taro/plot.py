@@ -46,7 +46,7 @@ def plot_export_map(data, **kwargs):
     color_mapper = LinearColorMapper(palette = palette, low = 0, high = 1000)
     
     # Create figure
-    p = figure(title = f'{!pwd}', 
+    p = figure(title = f'{__file__}', 
              plot_height = 700, plot_width = 1200,
              toolbar_location = None)
     p.xgrid.grid_line_color = None
