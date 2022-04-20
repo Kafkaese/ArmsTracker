@@ -92,3 +92,9 @@ def plot_export_map(data, **kwargs):
     
     return p
     
+def get_image_plot(path):
+    
+    p = figure(x_range=(0,1), y_range=(0,1))
+    p.image_url(url=path, x=0, y=1, w=0.8, h=0.6)
+    
+    return p
