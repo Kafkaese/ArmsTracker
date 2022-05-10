@@ -11,7 +11,7 @@ from taro.preproc.plotting import get_plot_export_data, get_sidebar_export_data
 from taro.plot import plot_export_map, plot_sidebar
 
 
-geo_data = geopandas.read_file('https://raw.githubusercontent.com/electricitymap/electricitymap-contrib/master/web/geo/world.geojson')
+geo_data = geopandas.read_file('../data/geo/custom_world.geojson')
 
 export_data = pd.read_csv('https://raw.githubusercontent.com/caatdata/eu-arms-export-data/master/export.csv', delimiter=';', header=None)
 
