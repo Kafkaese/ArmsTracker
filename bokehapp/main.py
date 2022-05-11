@@ -12,7 +12,8 @@ from taro.plot import plot_export_map, plot_sidebar
 
 print(__file__)
 
-geo_data = geopandas.read_file('../data/geo/custom_world.geojson')
+
+geo_data = geopandas.read_file('../data/geo/custom_world.json')
 
 
 
