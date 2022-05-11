@@ -65,7 +65,7 @@ def plot_export_map(data, **kwargs):
         <div>
             <div>
                 <img
-                    src="@flag" height="60" alt="@flag" width="90"
+                    src="@flag_svg" height="60" alt="@flag" width="90"
                     style="float: left; margin: 0px 15px 15px 0px;"
                     border="1"
                 ></img>

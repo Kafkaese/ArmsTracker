@@ -36,7 +36,7 @@ def get_plot_export_data(export_data, geo_data, years):
     #return export_total_data
     export_total_data.reset_index(inplace = True)
     
-    export_total_data['flag'] = export_total_data['source_country'].apply(flag)
+    #export_total_data['flag'] = export_total_data['source_country'].apply(flag)
     
     export_total_data.set_index('source_country')
     
@@ -55,6 +55,8 @@ def get_plot_export_data(export_data, geo_data, years):
     
      # Generae flag imgs
     data['flag'] = data['countryKey'].apply(lambda cc: f'https://raw.githubusercontent.com/Kafkaese/ArmsTracker/main/taro/data/flags/png/{cc.lower()}.png')
+    data['flag_svg'] = data['countryKey'].apply(lambda cc: f'https://raw.githubusercontent.com/Kafkaese/ArmsTracker/main/taro/data/flags/{cc.lower()}.svg')
+    
     
     # Round value to millions
     data['total_mil'] = data['value'].apply(lambda x: round(x/1000000, 2))
