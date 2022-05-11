@@ -82,11 +82,14 @@ def plot_export_map(data, **kwargs):
     tooltips_old = [ ('Name', '@flag'), ('Total Exports 2020 (Million EUR)', '@total_mil')]
     
     hover = HoverTool(tooltips = tooltips)
-    zoom = WheelZoomTool()
     
     # Add the hover tool to the graph
     p.add_tools(hover)
-    p.add_tools(zoom)
+    
+    # Zoom Wheel    
+    #zoom = WheelZoomTool()
+    p.toolbar.active_scroll = "auto"
+    #p.add_tools(zoom)
         
     #layout = column(p)
     #curdoc().add_root(layout)
