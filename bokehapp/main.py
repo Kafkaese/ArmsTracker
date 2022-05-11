@@ -10,10 +10,11 @@ from bokeh.io.doc import curdoc
 from taro.preproc.plotting import get_plot_export_data, get_sidebar_export_data
 from taro.plot import plot_export_map, plot_sidebar
 
+print(__file__)
 
 geo_data = geopandas.read_file('../data/geo/custom_world.geojson')
 
-print(__file__)
+
 
 export_data = pd.read_csv('https://raw.githubusercontent.com/caatdata/eu-arms-export-data/master/export.csv', delimiter=';', header=None)
 
