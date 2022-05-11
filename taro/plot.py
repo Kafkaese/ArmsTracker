@@ -87,9 +87,9 @@ def plot_export_map(data, **kwargs):
     p.add_tools(hover)
     
     # Zoom Wheel    
-    #zoom = WheelZoomTool()
-    p.toolbar.active_scroll = "auto"
-    #p.add_tools(zoom)
+    zoom = WheelZoomTool()
+    p.add_tools(zoom)
+    p.toolbar.active_scroll = zoom
         
     #layout = column(p)
     #curdoc().add_root(layout)
