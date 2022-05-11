@@ -13,6 +13,8 @@ from taro.plot import plot_export_map, plot_sidebar
 
 geo_data = geopandas.read_file('../data/geo/custom_world.geojson')
 
+print(__file__)
+
 export_data = pd.read_csv('https://raw.githubusercontent.com/caatdata/eu-arms-export-data/master/export.csv', delimiter=';', header=None)
 
 # drop empty column
