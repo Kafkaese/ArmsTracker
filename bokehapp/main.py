@@ -12,8 +12,8 @@ from taro.plot import plot_export_map, plot_sidebar
 
 print(__file__)
 
-
-geo_data = geopandas.read_file('../data/geo/custom_world.json')
+print()
+geo_data = geopandas.read_file('https://raw.githubusercontent.com/Kafkaese/ArmsTracker/main/data/geo/custom_world.json')
 
 
 
