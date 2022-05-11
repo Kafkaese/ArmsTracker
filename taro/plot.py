@@ -74,7 +74,7 @@ def plot_export_map(data, **kwargs):
                 <span style="font-size: 17px; font-weight: bold;">@name_long</span>
             </div>
             <div>
-                <span style="font-size: 15px;">Total Exports (mil EUR)</span>
+                <span style="font-size: 15px;">Total Exports</span>
                 <span style="font-size: 15px; color: #696;">@total_mil</span>
             </div>
         </div>
