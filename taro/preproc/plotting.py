@@ -47,6 +47,7 @@ def get_plot_export_data(export_data, geo_data, years):
     export_total_data['countryKey'] = export_total_data['countryKey'].apply(lambda x: x.strip())
     
     # Merge export with geo data
+    geo_data.rename({'iso_a2': 'countryKey'}, axis=1, inplace=True)
     data = geo_data.merge(export_total_data, how='left', on='countryKey')
     
     # Generate flag emojis
