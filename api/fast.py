@@ -14,7 +14,7 @@ app.add_middleware(
 
 @app.get('/')
 def index():
-    return({'greeting':'hello'})
+    return({'greeting':'welcome to armstracker api'})
 
 # get exports for country
 @app.get('/exports')
@@ -26,6 +26,10 @@ def exports(**kwargs):
 @app.get('/flags')
 def flags(**kwargs):
     if 'iso_a2' in kwargs:
-        return {f"{kwargs['iso_a2']}" : 'test'}
+        return {f"{kwargs['iso_a2']}" : 'path_to_flag_image'}
     
-    
+# get flag emojis for sidebar
+@app.get('flag_emojis')
+def flag_emojis(**kwargs):
+    if 'iso_a2' in kwargs:
+        return {f"{kwargs['iso_a2']}" : 'path_to_flag_emoji'}
