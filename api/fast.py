@@ -16,7 +16,16 @@ app.add_middleware(
 def index():
     return({'greeting':'hello'})
 
+# get exports for country
 @app.get('/exports')
 def exports(**kwargs):
     if 'iso_a2' in kwargs:
         return {f"{kwargs['iso_a2']}" : 'test'}
+    
+# get flag image for country
+@app.get('/flags')
+def flags(**kwargs):
+    if 'iso_a2' in kwargs:
+        return {f"{kwargs['iso_a2']}" : 'test'}
+    
+    
