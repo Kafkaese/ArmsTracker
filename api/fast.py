@@ -18,18 +18,21 @@ def index():
 
 # get exports for country
 @app.get('/exports')
-def exports(**kwargs):
+def exports(countryKey):
+    return {'countryKey': countryKey}
+    """ print(kwargs)
     if 'iso_a2' in kwargs:
-        return {f"{kwargs['iso_a2']}" : 'test'}
+        return {f"{kwargs['iso_a2']}" : 'test'} """
     
 # get flag image for country
 @app.get('/flags')
-def flags(**kwargs):
+def flags(countryKey):
     if 'iso_a2' in kwargs:
         return {f"{kwargs['iso_a2']}" : 'path_to_flag_image'}
     
 # get flag emojis for sidebar
 @app.get('flag_emojis')
 def flag_emojis(**kwargs):
+    
     if 'iso_a2' in kwargs:
         return {f"{kwargs['iso_a2']}" : 'path_to_flag_emoji'}
