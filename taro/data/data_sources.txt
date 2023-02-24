@@ -10,3 +10,24 @@ http://ruestungsexport-info.de/de.html
 FLAGS
 
 https://flagpedia.net
+
+
+
+
+### VIOLENT DEATHS
+
+world
+https://www.worldlifeexpectancy.com/cause-of-death/violence/by-country/ 2020 data
+->WHO
+
+
+# WHO Data
+Dashboard: https://platform.who.int/mortality/themes/theme-details/mdb/injuries
+WHO openData API: https://www.who.int/data/gho/info/gho-odata-api
+
+
+
+### REFUGEES
+
+UNHCR
+https://www.unhcr.org/refugee-statistics/download/?url=HF39gS
