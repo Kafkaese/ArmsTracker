@@ -1,0 +1,18 @@
+FROM python:3.8.3-slim-buster
+
+# Install taro + dependencies
+COPY taro taro
+COPY setup.py setup.py
+COPY requirements.txt requirements.txt
+
+RUN pip install --upgrade pip
+RUN pip install .
+
+# Copy bokeh map app
+COPY bokehapp app
+
+# Document port
+EXPOSE 5006
+
+# Run bokeh server
+CMD bokeh serve --allow-websocket-origin=localhost app
