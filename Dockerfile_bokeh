@@ -15,4 +15,4 @@ COPY bokehapp app
 EXPOSE 5006
 
 # Run bokeh server
-CMD bokeh serve app
+CMD bokeh serve --allow-websocket-origin=localhost app
