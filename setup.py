@@ -1,3 +1,4 @@
+from setuptools import find_packages
 from setuptools import setup
 
 
@@ -9,6 +10,6 @@ requirements = [x.strip() for x in content if 'git+' not in x]
 setup(name='ArmsTracker',
       version="1.0",
       description="Project Description",
-      packages=['taro'],
+      packages=find_packages(),
       install_requires=requirements
       )
